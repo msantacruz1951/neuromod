@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neuromodulación Popayán - Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f4f9f9;
+      color: #333;
+    }
+    header, footer {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    nav {
+      background-color: #94d2bd;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #005f73;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .counter {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+    }
+    .iconos-equipo {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    .like-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Neuromodulación Popayán</h1>
+    <p>Dile adiós a la ansiedad y depresión con tecnología transcraneal en acción</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="beneficios.html">Beneficios</a>
+    <a href="tdcs.html">tDCS</a>
+    <a href="tms.html">TMS</a>
+    <a href="neuromodulacion.html">Neuromodulación</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main class="content">
+    <div class="card">
+      <h2>Bienvenido a nuestro consultorio</h2>
+      <p>Somos un centro especializado en tratamientos innovadores para ansiedad y depresión. Utilizamos tecnología de neuromodulación no invasiva, como Estimulación Eléctrica Transcraneal <strong>(tDCS)</strong> y Estimulación Magnética Transcraneal <strong>TMS</strong>, en un ambiente profesional, cálido y personalizado.</p>
+      <img src="https://images.unsplash.com/photo-1581093588401-1eb4a6e95c13?auto=format&fit=crop&w=960&q=80" alt="Consultorio Neuromodulación" />
+      <p>Contamos con un equipo interdisciplinario experto en salud mental y neurociencia.</p>
+      <h3 style="text-align:center;">Nuestro equipo interdisciplinario</h3>
+      <div class="iconos-equipo">
+        <span title="Psicología"><i class="fas fa-brain"></i></span>
+        <span title="Psiquiatría"><i class="fas fa-user-md"></i></span>
+        <span title="Neurología"><i class="fas fa-head-side-virus"></i></span>
+        <span title="Neuropsicología"><i class="fas fa-dna"></i></span>
+        <span title="Ingeniería Biomédica"><i class="fas fa-microscope"></i></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>¿Por qué cuidar tu salud mental?</h2>
+      <p>La salud mental es vital para tu bienestar general. Nuestro enfoque combina ciencia, tecnología y atención humana para ayudarte a recuperar el equilibrio emocional.</p>
+      <ul>
+        <li><strong>Tratamientos sin medicamentos</strong> para reducir efectos secundarios</li>
+        <li><strong>Sesiones personalizadas</strong> y acompañamiento integral</li>
+        <li><strong>Mejora de la concentración, sueño y estado de ánimo</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>¿Te gustó esta página?</h2>
+      <div class="like-buttons">
+        <button onclick="like()">👍 Me gusta (<span id="likes">0</span>)</button>
+        <button onclick="dislike()">👎 No me gusta (<span id="dislikes">0</span>)</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="TMS-tDCS.jpg" alt="Terapias TMS y tDCS">
+    </div>
+
+    <p id="visitInfo" style="display:none; text-align: center;">Visitas a esta página: <span id="visitCounter" class="counter">0</span></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Neuromodulación Popayán</p>
+    <div class="social">
+      <a href="https://www.instagram.com/neuro_modpop?igsh=dDVybXE4YXQ2bTRh" target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.facebook.com/share/16LmNyLbWH/" target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="https://www.youtube.com/@NeuromodulacionPopayan" target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const isAdmin = window.location.search.includes("admin=true");
+
+    // Contador de visitas solo visible para admin
+    if (isAdmin) {
+      let visitas = localStorage.getItem("visitas") || 0;
+      visitas++;
+      localStorage.setItem("visitas", visitas);
+      document.getElementById("visitCounter").textContent = visitas;
+      document.getElementById("visitInfo").style.display = "block";
+    }
+
+    // Likes y Dislikes
+    let likes = localStorage.getItem("likes") || 0;
+    let dislikes = localStorage.getItem("dislikes") || 0;
+    document.getElementById("likes").textContent = likes;
+    document.getElementById("dislikes").textContent = dislikes;
+
+    function like() {
+      likes++;
+      localStorage.setItem("likes", likes);
+      document.getElementById("likes").textContent = likes;
+    }
+    function dislike() {
+      dislikes++;
+      localStorage.setItem("dislikes", dislikes);
+      document.getElementById("dislikes").textContent = dislikes;
+    }
+  </script>
+</body>
+</html>
+
