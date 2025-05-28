@@ -79,6 +79,23 @@
     <p>Dile adiós a la ansiedad y depresión con tecnología transcraneal en acción</p>
   </header>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
+    if (isAdmin) {
+      const img = document.createElement("img");
+      img.src = "https://hits.sh/tu-dominio.com/index.html.svg?view";
+      img.alt = "Contador de visitas";
+      img.style.display = "block";
+      img.style.margin = "10px auto";
+      document.getElementById("visitLabel").innerHTML = "Visitas a esta página:";
+      document.getElementById("visitLabel").appendChild(img);
+    } else {
+      document.getElementById("visitLabel").style.display = "none";
+    }
+  });
+</script>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="tdcs.html">tDCS</a>
