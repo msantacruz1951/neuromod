@@ -102,13 +102,14 @@
     <p>Dile adiós a la ansiedad y depresión con tecnología transcraneal en acción</p>
   </header>
 
-  <nav>
+<nav>
     <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="beneficios.html">Beneficios</a>
     <a href="tdcs.html">tDCS</a>
     <a href="tms.html">TMS</a>
     <a href="neuromodulacion.html">Neuromodulación</a>
+    <a href="beneficios.html">Beneficios</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="somos.html">¿Quiénes somos?</a>
     <a href="contacto.html">Contacto</a>
   </nav>
 
@@ -155,16 +156,21 @@
       <video src="tms.mp4" controls></video>
     </div>
 
-    <div class="card interaccion">
-      <h3>¿Te gustó esta página?</h3>
-      <button onclick="updateCounter('likeCounter', 'like')">👍 Me gusta (<span id="likeCounter">0</span>)</button>
-      <button onclick="updateCounter('dislikeCounter', 'dislike')">👎 No me gusta (<span id="dislikeCounter">0</span>)</button>
+    <div class="card encuesta">
+      <h2>¿Estarías dispuesto a probar la TMS como tratamiento para la ansiedad o depresión?</h2>
+      <div id="surveyButtons">
+        <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
+        <button onclick="surveyVote(false)">❌ No, gracias</button>
+      </div>
+      <p id="surveyMessage" style="margin-top: 1rem; font-weight: bold;"></p>
     </div>
 
-    <div class="card interaccion">
-      <h3>¿Estarías dispuesto a probar la TMS como tratamiento alternativo a la ansiedad y depresión?</h3>
-      <button onclick="updateCounter('acceptCounter', 'accept')">Sí, lo intentaría (<span id="acceptCounter">0</span>)</button>
-      <button onclick="updateCounter('rejectCounter', 'reject')">No, no me interesa (<span id="rejectCounter">0</span>)</button>
+    <div class="card feedback">
+      <h2>¿Te gustó esta página?</h2>
+      <button onclick="vote('like')">👍 Me gustó</button>
+      <span id="likeCount">0</span>
+      <button onclick="vote('dislike')">👎 No me gustó</button>
+      <span id="dislikeCount">0</span>
     </div>
   </main>
 
