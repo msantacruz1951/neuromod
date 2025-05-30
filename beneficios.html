@@ -174,12 +174,12 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card feedback">
       <h2>¿Te gustó esta página?</h2>
-      <div class="like-buttons">
-        <button onclick="updateLike('like')">👍 Me gusta (<span id="likeCounter">0</span>)</button>
-        <button onclick="updateLike('dislike')">👎 No me gusta (<span id="dislikeCounter">0</span>)</button>
-      </div>
+      <button onclick="vote('like')">👍 Me gustó</button>
+      <span id="likeCount">0</span>
+      <button onclick="vote('dislike')">👎 No me gustó</button>
+      <span id="dislikeCount">0</span>
     </div>
 
   </main>
