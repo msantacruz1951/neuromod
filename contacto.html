@@ -75,17 +75,32 @@
       color: white;
     }
     .social {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
       margin-top: 2rem;
+    }
+    .social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      font-size: 0.9rem;
     }
-    .social a {
+    .social-link a {
       color: #005f73;
-      margin: 0 15px;
-      font-size: 1.8rem;
       text-decoration: none;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
     }
-    .social a:hover {
+    .social-link a:hover {
       color: #0a9396;
+    }
+    .social-link span {
+      margin-top: 5px;
+      font-size: 0.85rem;
+      color: #005f73;
     }
   </style>
   <script>
@@ -144,11 +159,37 @@
     </form>
 
     <div class="social">
-      <a href="https://www.instagram.com/neuro_modpop" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/Neuromodulación-Popayán" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="mailto:neuromodpop@gmail.com" title="Correo"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.youtube.com/@NeuromodulaciónPopayán" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/573234427090" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="social-link">
+        <a href="https://www.facebook.com/Neuromodulación-Popayán" target="_blank" title="Facebook">
+          <i class="fab fa-facebook"></i>
+          <span>@Neuromodulación-Popayán</span>
+        </a>
+      </div>
+      
+      <div class="social-link">
+        <a href="https://www.instagram.com/neuro_modpop" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+          <span>@neuro_modpop</span>
+        </a>
+      </div>
+      <div class="social-link">
+        <a href="https://www.youtube.com/@NeuromodulaciónPopayán" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+          <span>@NeuromodulaciónPopayán</span>
+        </a>
+      </div>
+      <div class="social-link">
+        <a href="mailto:neuromodpop@gmail.com" title="Correo">
+          <i class="fas fa-envelope"></i>
+          <span>neuromodpop@gmail.com</span>
+        </a>
+      </div>
+      <div class="social-link">
+        <a href="https://wa.me/573234427090" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+          <span>+57 323 4427090</span>
+        </a>
+      </div>
     </div>
   </main>
 
