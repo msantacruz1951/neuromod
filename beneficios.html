@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beneficios - Neuromodulación Popayán</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f4f9f9;
+      color: #333;
+    }
+    header, footer {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    nav {
+      background-color: #94d2bd;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #005f73;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    video, img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      padding-left: 1.25rem;
+    }
+    .counter {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+    }
+    .like-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .like-buttons button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #0a9396;
+      color: white;
+    }
+    .like-buttons button:hover {
+      background-color: #00797a;
+    }
+    .iconos-equipo {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+  </style>
+  <script>
+    async function updateVisitCount() {
+      const response = await fetch('https://api.countapi.xyz/hit/neuromodpop.site/beneficios');
+      const data = await response.json();
+      document.getElementById("visitCounter").textContent = data.value;
+    }
+
+    async function updateLike(type) {
+      const response = await fetch(`https://api.countapi.xyz/hit/neuromodpop.site/${type}`);
+      const data = await response.json();
+      document.getElementById(`${type}Counter`).textContent = data.value;
+    }
+
+    async function loadLikes() {
+      const like = await fetch('https://api.countapi.xyz/get/neuromodpop.site/like');
+      const dislike = await fetch('https://api.countapi.xyz/get/neuromodpop.site/dislike');
+      const likeData = await like.json();
+      const dislikeData = await dislike.json();
+      document.getElementById("likeCounter").textContent = likeData.value;
+      document.getElementById("dislikeCounter").textContent = dislikeData.value;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      updateVisitCount();
+      loadLikes();
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Beneficios de tDCS y TMS</h1>
+    <p>Dile adiós a la ansiedad y depresión con tecnología transcraneal en acción</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="tdcs.html">tDCS</a>
+    <a href="tms.html">TMS</a>
+    <a href="neuromodulacion.html">Neuromodulación</a>
+    <a href="beneficios.html">Beneficios</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="somos.html">¿Quiénes somos?</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main class="content">
+
+    <div class="card">
+      <img src="consultorio.png" alt="Consultorio Neuromodulación Popayán" />
+      <video controls src="consul.mp4"></video>
+      <video controls src="consultorio.mp4"></video>
+    </div>
+
+    <div class="card">
+      <h2>Transforma tu vida con tecnología transcraneal</h2>
+      <p>¿Sufres de ansiedad o depresión? La neuromodulación con tDCS (Estimulación Transcraneal por Corriente Directa) y TMS (Estimulación Magnética Transcraneal) es una alternativa comprobada y segura, utilizada en clínicas de renombre mundial para mejorar tu bienestar mental sin necesidad de medicamentos.</p>
+    </div>
+
+    <div class="card">
+      <h2>Beneficios de la Neuromodulación</h2>
+      <ul>
+        <li>Reducción significativa de los síntomas de ansiedad y depresión.</li>
+        <li>No genera dependencia ni efectos secundarios sistémicos.</li>
+        <li>Estimula áreas específicas del cerebro relacionadas con el estado de ánimo.</li>
+        <li>Tratamientos personalizados con seguimiento clínico profesional.</li>
+        <li>Procedimientos avalados por la comunidad científica internacional.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>¿Por qué elegir tDCS?</h2>
+      <ul>
+        <li>Terapia indolora y ambulatoria.</li>
+        <li>Estimulación suave que modula la actividad cerebral.</li>
+        <li>Ideal para pacientes que no toleran o no desean medicación.</li>
+        <li>Evidencia sólida en depresión resistente, ansiedad generalizada y TDAH.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>¿Por qué elegir TMS?</h2>
+      <ul>
+        <li>Utiliza pulsos magnéticos que penetran el cuero cabelludo sin dolor.</li>
+        <li>Alto impacto clínico en depresión mayor, ansiedad crónica y trastorno obsesivo-compulsivo.</li>
+        <li>Sesiones de corta duración con efectos acumulativos positivos.</li>
+        <li>Alta tasa de efectividad en pacientes sin respuesta a medicamentos.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>¿Te gustó esta página?</h2>
+      <div class="like-buttons">
+        <button onclick="updateLike('like')">👍 Me gusta (<span id="likeCounter">0</span>)</button>
+        <button onclick="updateLike('dislike')">👎 No me gusta (<span id="dislikeCounter">0</span>)</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Neuromodulación Popayán</p>
+    <p>Visitas a esta página: <span id="visitCounter" class="counter">Cargando...</span></p>
+    <div class="social">
+      <a href="https://www.instagram.com/neuro_modpop" target="_blank" style="color:white; margin: 0 10px;">Instagram</a>
+      <a href="https://www.facebook.com/Neuromodulación-Popayán" target="_blank" style="color:white; margin: 0 10px;">Facebook</a>
+      <a href="https://wa.me/573234427090" target="_blank" style="color:white; margin: 0 10px;">WhatsApp</a>
+    </div>
+  </footer>
+</body>
+</html>
