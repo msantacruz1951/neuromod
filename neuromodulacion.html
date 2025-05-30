@@ -97,6 +97,16 @@
       document.getElementById("dislikeCount").textContent = dislikes;
     }
 
+    let trues = 0;
+    let falses = 0;
+    function vote(option) {
+      if (option === 'trues') trues++;
+      else falses++;
+      document.getElementById("truesCount").textContent = trues;
+      document.getElementById("falsesCount").textContent = falses;
+    }
+
+    
     function surveyVote(interested) {
       const buttons = document.querySelectorAll('#surveyButtons button');
       buttons.forEach(btn => btn.disabled = true);
@@ -174,9 +184,9 @@
     <div class="card encuesta">
       <h2>¿Estarías dispuesto a probar la neuromodulación como tratamiento para la ansiedad o depresión?</h2>
       <div id="surveyButtons">
-        <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
+        <button onclick="surveyVote(trues)">✅ Sí, me interesa</button>
         <span id="trueCount">0</span>
-        <button onclick="surveyVote(false)">❌ No, gracias</button>
+        <button onclick="surveyVote(falses)">❌ No, gracias</button>
         <span id="falseCount">0</span>
       </div>
       <p id="surveyMessage" style="margin-top: 1rem; font-weight: bold;"></p>
