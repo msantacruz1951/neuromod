@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto - Neuromodulación Popayán</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Fo3rlrZj/kTcWxKF1uHlcU7JqTP8y7GzKDqN6DfRMF1eFV3rA+p3bd6U+i6SmNU+LKymV5hYld5KU4O1yT3zjA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -74,14 +75,17 @@
       color: white;
     }
     .social {
-      margin-top: 1rem;
+      margin-top: 2rem;
       text-align: center;
     }
     .social a {
-      color: white;
-      margin: 0 10px;
+      color: #005f73;
+      margin: 0 15px;
+      font-size: 1.8rem;
       text-decoration: none;
-      font-weight: 600;
+    }
+    .social a:hover {
+      color: #0a9396;
     }
   </style>
   <script>
@@ -103,7 +107,6 @@
         return;
       }
 
-      // Aquí se puede conectar con un backend o servicio de correo
       alert("Gracias por contactarnos. Responderemos pronto.");
       document.getElementById("contactForm").reset();
     }
@@ -112,16 +115,17 @@
 <body>
   <header>
     <h1>Contacto - Neuromodulación Popayán</h1>
-    <p>Elimina la ansiedad y depresión con tecnología transcraneal en acción</p>
+    <p>Dile adiós a la ansiedad y depresión con tecnología transcraneal en acción</p>
   </header>
 
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="beneficios.html">Beneficios</a>
     <a href="tdcs.html">tDCS</a>
     <a href="tms.html">TMS</a>
     <a href="neuromodulacion.html">Neuromodulación</a>
+    <a href="beneficios.html">Beneficios</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="somos.html">¿Quiénes somos?</a>
     <a href="contacto.html">Contacto</a>
   </nav>
 
@@ -138,10 +142,13 @@
 
       <button type="submit">Enviar</button>
     </form>
+
     <div class="social">
-      <a href="https://www.instagram.com/neuro_modpop" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/Neuromodulación-Popayán" target="_blank">Facebook</a>
-      <a href="https://wa.me/573234427090" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/neuro_modpop" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/Neuromodulación-Popayán" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:neuromodpop@gmail.com" title="Correo"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.youtube.com/@NeuromodulaciónPopayán" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/573234427090" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </main>
 
