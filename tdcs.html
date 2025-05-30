@@ -163,19 +163,23 @@
         <span title="Neuroterapeutas">💆‍♂️</span>
       </div>
     </div>
-
-    <div class="card">
-      <h2>¿Te gustó esta página?</h2>
-      <div class="buttons">
-        <button class="like" onclick="like()">👍 Me gusta (<span id="likeCounter">0</span>)</button>
-        <button class="dislike" onclick="dislike()">👎 No me gusta (<span id="dislikeCounter">0</span>)</button>
+<div class="card encuesta">
+      <h2>¿Estarías dispuesto a probar la tDCS como tratamiento para la ansiedad o depresión?</h2>
+      <div id="surveyButtons">
+        <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
+        <button onclick="surveyVote(false)">❌ No, gracias</button>
       </div>
+      <p id="surveyMessage" style="margin-top: 1rem; font-weight: bold;"></p>
     </div>
 
-    <div class="card survey">
-      <h2>¿Estarías dispuesto a probar la tDCS como tratamiento alternativo a la ansiedad y depresión?</h2>
-      <button onclick="alert('¡Gracias por tu respuesta! Podemos ayudarte a agendar una consulta.')">Sí, quiero intentarlo</button>
+    <div class="card feedback">
+      <h2>¿Te gustó esta página?</h2>
+      <button onclick="vote('like')">👍 Me gustó</button>
+      <span id="likeCount">0</span>
+      <button onclick="vote('dislike')">👎 No me gustó</button>
+      <span id="dislikeCount">0</span>
     </div>
+
   </main>
 
   <footer>
