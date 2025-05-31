@@ -193,13 +193,18 @@
     </div>
 
     <div class="card encuesta">
-      <h2>¿Estarías dispuesto a probar la neuromodulación como tratamiento para la ansiedad o depresión?</h2>
-      <div id="surveyButtons">
-        <button onclick="surveyVote(trues)">✅ Sí, me interesa</button>
-        <span id="trueCount">0</span>
-        <button onclick="surveyVote(falses)">❌ No, gracias</button>
-        <span id="falseCount">0</span>
-      </div>
+      <h2>¿Estarías dispuesto a agendar una cita en nuestro consultorio para probar la neuromodulación como tratamiento alternativo para la ansiedad o depresión?</h2>
+      <div id="surveyButtons" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+  <div>
+    <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
+    <span id="trueCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+  <div>
+    <button onclick="surveyVote(false)">❌ No, gracias</button>
+    <span id="falseCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+</div>
+
       <p id="surveyMessage" style="margin-top: 1rem; font-weight: bold;"></p>
     </div>
 
