@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z57H42W41P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z57H42W41P');
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z57H42W41P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z57H42W41P');
-</script>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Neuromodulación Popayán - Inicio</title>
@@ -90,23 +88,6 @@
     <p>Dile adiós a la ansiedad y depresión con tecnología transcraneal en acción</p>
   </header>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
-    if (isAdmin) {
-      const img = document.createElement("img");
-      img.src = "https://hits.sh/tu-dominio.com/index.html.svg?view";
-      img.alt = "Contador de visitas";
-      img.style.display = "block";
-      img.style.margin = "10px auto";
-      document.getElementById("visitLabel").innerHTML = "Visitas a esta página:";
-      document.getElementById("visitLabel").appendChild(img);
-    } else {
-      document.getElementById("visitLabel").style.display = "none";
-    }
-  });
-</script>
-
   <nav>
     <a href="index.html">Inicio</a>
     <a href="tdcs.html">tDCS</a>
@@ -143,9 +124,8 @@
         <li><strong>Mejora de la concentración, sueño y estado de ánimo</strong></li>
       </ul>
     </div>
-    
 
-<div class="card encuesta">
+    <div class="card encuesta">
       <h2>¿Estarías dispuesto a agendar una cita en nuestro consultorio para probar un tratamiento alternativo para la ansiedad o depresión?</h2>
       <div id="surveyButtons">
         <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
@@ -186,35 +166,45 @@
     </div>
   </footer>
 
+  <!-- SCRIPT para votos y visitas -->
   <script>
-    const isAdmin = window.location.search.includes("admin=true");
+    document.addEventListener("DOMContentLoaded", () => {
+      const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
 
-    // Contador de visitas solo visible para admin
-    if (isAdmin) {
-      let visitas = localStorage.getItem("visitas") || 0;
-      visitas++;
-      localStorage.setItem("visitas", visitas);
-      document.getElementById("visitCounter").textContent = visitas;
-      document.getElementById("visitInfo").style.display = "block";
+      // Visitas
+      if (isAdmin) {
+        let visitas = localStorage.getItem("visitas") || 0;
+        visitas++;
+        localStorage.setItem("visitas", visitas);
+        document.getElementById("visitCounter").textContent = visitas;
+        document.getElementById("visitInfo").style.display = "block";
+      }
+
+      // Mostrar valores almacenados
+      document.getElementById("trueCount").textContent = localStorage.getItem("trueCount") || 0;
+      document.getElementById("falseCount").textContent = localStorage.getItem("falseCount") || 0;
+      document.getElementById("likeCount").textContent = localStorage.getItem("likeCount") || 0;
+      document.getElementById("dislikeCount").textContent = localStorage.getItem("dislikeCount") || 0;
+    });
+
+    // Función encuesta
+    function surveyVote(isInterested) {
+      const key = isInterested ? "trueCount" : "falseCount";
+      let count = parseInt(localStorage.getItem(key)) || 0;
+      count++;
+      localStorage.setItem(key, count);
+      document.getElementById(key).textContent = count;
+      document.getElementById("surveyMessage").textContent = "¡Gracias por tu respuesta!";
     }
 
-    // Likes y Dislikes
-    let likes = localStorage.getItem("likes") || 0;
-    let dislikes = localStorage.getItem("dislikes") || 0;
-    document.getElementById("likes").textContent = likes;
-    document.getElementById("dislikes").textContent = dislikes;
-
-    function like() {
-      likes++;
-      localStorage.setItem("likes", likes);
-      document.getElementById("likes").textContent = likes;
-    }
-    function dislike() {
-      dislikes++;
-      localStorage.setItem("dislikes", dislikes);
-      document.getElementById("dislikes").textContent = dislikes;
+    // Función likes
+    function vote(type) {
+      const key = type === "like" ? "likeCount" : "dislikeCount";
+      let count = parseInt(localStorage.getItem(key)) || 0;
+      count++;
+      localStorage.setItem(key, count);
+      document.getElementById(key).textContent = count;
     }
   </script>
 </body>
 </html>
-
