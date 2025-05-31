@@ -176,13 +176,18 @@
       </div>
     </div>
 <div class="card encuesta">
-      <h2>¿Estarías dispuesto a probar la tDCS como tratamiento para la ansiedad o depresión?</h2>
-      <div id="surveyButtons">
-        <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
-         <span id="trueCount">0</span>
-        <button onclick="surveyVote(false)">❌ No, gracias</button>
-        <span id="falseCount">0</span>
-      </div>
+      <h2>¿Estarías dispuesto a agendar una cita en nuestro consultorio para probar un tratamiento alternativo para la ansiedad o depresión?</h2>
+      <div id="surveyButtons" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+  <div>
+    <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
+    <span id="trueCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+  <div>
+    <button onclick="surveyVote(false)">❌ No, gracias</button>
+    <span id="falseCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+</div>
+
       <p id="surveyMessage" style="margin-top: 1rem; font-weight: bold;"></p>
     </div>
 
@@ -193,12 +198,11 @@
       <button onclick="vote('dislike')">👎 No me gustó</button>
       <span id="dislikeCount">0</span>
     </div>
-
   </main>
 
   <footer>
     <p>&copy; 2025 Neuromodulación Popayán</p>
-    <p>Visitas a esta página: <span id="visitCounter" class="counter">Cargando...</span></p>
+    
     <div class="social">
       <a href="https://www.instagram.com/neuro_modpop" target="_blank" style="color:white; margin: 0 10px;">Instagram</a>
       <a href="https://www.facebook.com/Neuromodulación-Popayán" target="_blank" style="color:white; margin: 0 10px;">Facebook</a>
