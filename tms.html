@@ -170,22 +170,33 @@
 
     <div class="card encuesta">
       <h2>¿Estarías dispuesto a probar la TMS como tratamiento para la ansiedad o depresión?</h2>
-      <div id="surveyButtons">
-        <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
-         <span id="trueCount">0</span>
-        <button onclick="surveyVote(false)">❌ No, gracias</button>
-        <span id="falseCount">0</span>
-      </div>
+      <div id="surveyButtons" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+  <div>
+    <button onclick="surveyVote(true)">✅ Sí, me interesa</button>
+    <span id="trueCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+  <div>
+    <button onclick="surveyVote(false)">❌ No, gracias</button>
+    <span id="falseCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+</div>
+
       <p id="surveyMessage" style="margin-top: 1rem; font-weight: bold;"></p>
     </div>
 
     <div class="card feedback">
       <h2>¿Te gustó esta página?</h2>
-      <button onclick="vote('like')">👍 Me gustó</button>
-      <span id="likeCount">0</span>
-      <button onclick="vote('dislike')">👎 No me gustó</button>
-      <span id="dislikeCount">0</span>
-    </div>
+      <div class="like-buttons">
+  <div>
+    <button onclick="vote('like')">👍 Me gustó</button>
+    <span id="likeCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+  <div>
+    <button onclick="vote('dislike')">👎 No me gustó</button>
+    <span id="dislikeCount" style="margin-left: 5px; font-weight: bold;">0</span>
+  </div>
+</div>
+
   </main>
 
   <footer>
